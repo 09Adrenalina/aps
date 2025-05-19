@@ -1,0 +1,77 @@
+/* Menu de navegação */
+nav {
+  background: #34495e;
+}
+
+nav .container {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo do contêiner */
+  align-items: center; /* Alinha verticalmente */
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Mantenha o menu em linha por padrão */
+  flex-wrap: nowrap; /* Não permita que os itens quebrem para a linha de baixo */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimento padrão */
+}
+
+nav ul li {
+  margin: 0 15px; /* Espaçamento entre os itens */
+  text-align: center; /* Centraliza o texto dentro do item */
+}
+
+nav ul li a {
+  display: block; 
+  padding: 15px 10px;
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #e74c3c;
+  outline: none;
+}
+
+/* Estilo para o ícone do menu */
+i#hamburguer { 
+  background-color: #34495e;
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer; 
+}
+
+i#hamburguer:hover { 
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Muda para coluna em telas pequenas */
+    width: 100%;
+    max-width: 320px;
+    display: none; /* Inicialmente oculto */
+  }
+
+  nav ul.show {
+    display: flex; /* Exibe o menu quando a classe 'show' é adicionada */
+  }
+
+  nav .container {
+    flex-direction: column; /* Alinha o ícone e o menu verticalmente */
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%; /* Faz com que cada item ocupe toda a largura */
+    text-align: center; /* Centraliza o texto dentro do item */
+  }
+}
